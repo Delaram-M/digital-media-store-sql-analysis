@@ -1,0 +1,9 @@
+EmployeeFirstName,EmployeeLastName,ManagerFirstName,ManagerLastName,EmployeeRevenue
+Jane,Peacock,Nancy,Edwards,833.04
+Margaret,Park,Nancy,Edwards,775.4
+Steve,Johnson,Nancy,Edwards,720.16
+Andrew,Adams,,,0
+Laura,Callahan,Michael,Mitchell,0
+Nancy,Edwards,Andrew,Adams,0
+Robert,King,Michael,Mitchell,0
+Michael,Mitchell,Andrew,Adams,0
