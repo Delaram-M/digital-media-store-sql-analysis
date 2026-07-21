@@ -26,6 +26,8 @@ In this project, we address the following questions using SQL queries:
 6. Which 5 countries generate the most revenue, and what is the average revenue per customer in each?
 7. For each customer, what is their top genre by amount spent?
 
+<br>
+
 ### Question 1: Who are the top 5 highest-spending customers, and how much has each spent in total?
 
 ```sql
@@ -47,7 +49,7 @@ LIMIT 5;
 | 45 | Ladislav | Kovács | 45.62 |
 | 46 | Hugh | O'Reilly | 45.62 |
 
-
+<br>
 
 ### Question 2: What is total revenue by genre?
 ```sql
@@ -88,7 +90,7 @@ ORDER BY GenreRevenue DESC, Genre.Name ASC;
 | 25 | Opera | 0 |
 
 
-
+<br>
 
 ### Question 3: Which employees generated the most revenue through their assigned customers, and who is each employee's manager?
 
@@ -115,7 +117,7 @@ ORDER BY EmployeeRevenue DESC, employee.LastName ASC, employee.FirstName ASC;
 | Robert | King | Michael | Mitchell | 0 |
 | Michael | Mitchell | Andrew | Adams | 0 |
 
-
+<br>
 
 ### Question 4: What is the running cumulative total of revenue, month by month, over the store's history?
 
@@ -192,7 +194,7 @@ ORDER BY Month;
 | 2013-11 | 49.62 | 2289.98 |
 | 2013-12 | 38.62 | 2328.6 |
 
-
+<br>
 
 ### Question 5: Which tracks have never been purchased?
 
@@ -231,7 +233,7 @@ The following table is the truncated output of the query.
 | 1073 | Óia Eu Aqui De Novo | 0 |
 | 1077 | Último Pau-De-Arara | 0 |
 
-
+<br>
 
 ### Question 6: Which 5 countries generate the most revenue, and what is the average revenue per customer in each?
 
@@ -254,6 +256,7 @@ LIMIT 5;
 | Brazil | 190.1 | 5 | 38.02 |
 | Germany | 156.48 | 4 | 39.12 |
 
+<br>
 
 ### Question 7: For each customer, what is their top genre by amount spent?
 
