@@ -26,7 +26,6 @@ In this project, we address the following questions using SQL queries:
 6. Which 5 countries generate the most revenue, and what is the average revenue per customer in each?
 7. For each customer, what is their top genre by amount spent?
 
-<br>
 
 ### Question 1: Who are the top 5 highest-spending customers, and how much has each spent in total?
 
@@ -63,7 +62,6 @@ The top 5 highest-spending customers are the following:
 
 The top 5 highest-spending customers have close total spendings ranging from 49.62 to 45.62.
 
-<br>
 
 ### Question 2: What is total revenue by genre?
 
@@ -112,7 +110,6 @@ Question response:
 
 Each genre and its total revenue are indicated in the above table. Opera is the only genre with no revenue. Rock is by far the genre with highest revenue; Rock has more than twice the revenue of the second highest genre in terms of total revenue.
 
-<br>
 
 ### Question 3: Which employees generated the most revenue through their assigned customers, and who is each employee's manager?
 
@@ -154,7 +151,6 @@ The following are the 3 revenue-generating employees along with their manager so
 3. Steve Johnson reporting to Nancy Edwards with 720.16 revenue generated
 
 
-<br>
 
 ### Question 4: What is the running cumulative total of revenue, month by month, over the store's history?
 
@@ -240,7 +236,6 @@ Question response:
 The above table shows each month's revenue and the cumulative revenue. Most months have a revenue of 37.62, and the highest revenue is 52.62 in 2010-01.
 
 
-<br>
 
 ### Question 5: Which tracks have never been purchased?
 
@@ -286,7 +281,7 @@ Question response:
 
 The query outputs a list of more than 1500 tracks never purchased saved in `queries-and-outputs\query5-output.csv`.
 
-<br>
+
 
 ### Question 6: Which 5 countries generate the most revenue, and what is the average revenue per customer in each?
 
@@ -318,7 +313,6 @@ Question response:
 
 The table above shows a list of top 5 countries in terms of total revenue along with their revenue per customer; USA and Canada have by far the highest revenue, but the revenue per customer of the 5 countries are close.
 
-<br>
 
 ### Question 7: For each customer, what is their top genre by amount spent?
 
