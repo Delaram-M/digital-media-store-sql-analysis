@@ -108,7 +108,7 @@ Query output:
 | 5 | Rock And Roll | 5.94 |
 | 25 | Opera | 0 |
 
-Questions response:
+Question response:
 
 Each genre and its total revenue are indicated in the above table. Opera is the only genre with no revenue. Rock is by far the genre with highest revenue; Rock has more than twice the revenue of the second highest genre in terms of total revenue.
 
