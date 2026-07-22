@@ -30,6 +30,8 @@ In this project, we address the following questions using SQL queries:
 
 ### Question 1: Who are the top 5 highest-spending customers, and how much has each spent in total?
 
+SQL query:
+
 ```sql
 SELECT Customer.CustomerId, Customer.FirstName, Customer.LastName, SUM(Invoice.Total) AS InvoicesSum
 FROM Customer
@@ -40,6 +42,7 @@ ORDER BY InvoicesSum DESC, LastName ASC, FirstName ASC
 LIMIT 5;
 ```
 
+Query output:
 
 | CustomerId | FirstName | LastName | InvoicesSum |
 |---|---|---|---|
@@ -49,9 +52,22 @@ LIMIT 5;
 | 45 | Ladislav | Kovács | 45.62 |
 | 46 | Hugh | O'Reilly | 45.62 |
 
+Question response:
+
+The top 5 highest-spending customers are the following:
+- Helena Holý (with 49.62 total spending)
+- Richard Cunningham (with 47.62 total spending)
+- Luis Rojas (with 46.62 total spending)
+- Ladislav Kovács (with 45.62 total spending)
+- Hugh O'Reilly (with 45.62 total spending)
+
+The top 5 highest-spending customers have close total spendings ranging from 49.62 to 45.62.
+
 <br>
 
 ### Question 2: What is total revenue by genre?
+
+SQL query:
 ```sql
 SELECT Genre.GenreId, Genre.Name, COALESCE(SUM(InvoiceLine.UnitPrice * InvoiceLine.Quantity), 0)  AS GenreRevenue
 FROM Genre
@@ -60,6 +76,9 @@ LEFT JOIN InvoiceLine ON InvoiceLine.TrackId = Track.TrackId
 GROUP BY Genre.Name
 ORDER BY GenreRevenue DESC, Genre.Name ASC;
 ```
+
+
+Query output:
 
 | GenreId | Name | GenreRevenue |
 |---|---|---|
@@ -89,10 +108,16 @@ ORDER BY GenreRevenue DESC, Genre.Name ASC;
 | 5 | Rock And Roll | 5.94 |
 | 25 | Opera | 0 |
 
+Questions response:
+
+Each genre and its total revenue are indicated in the above table. Opera is the only genre with no revenue. Rock is by far the genre with highest revenue; Rock has more than twice the revenue of the second highest genre in terms of total revenue.
 
 <br>
 
 ### Question 3: Which employees generated the most revenue through their assigned customers, and who is each employee's manager?
+
+
+SQL query: 
 
 ```sql
 SELECT employee.FirstName AS EmployeeFirstName, employee.LastName AS EmployeeLastName,
@@ -106,6 +131,8 @@ GROUP BY employee.EmployeeId
 ORDER BY EmployeeRevenue DESC, employee.LastName ASC, employee.FirstName ASC;
 ```
 
+Query output: 
+
 | EmployeeFirstName | EmployeeLastName | ManagerFirstName | ManagerLastName | EmployeeRevenue |
 |---|---|---|---|---|
 | Jane | Peacock | Nancy | Edwards | 833.04 |
@@ -117,10 +144,21 @@ ORDER BY EmployeeRevenue DESC, employee.LastName ASC, employee.FirstName ASC;
 | Robert | King | Michael | Mitchell | 0 |
 | Michael | Mitchell | Andrew | Adams | 0 |
 
+
+Question response:
+
+The following are the 3 revenue-generating employees along with their manager sorted based on total revenue generated:
+
+1. Jane Peacock reporting to Nancy Edwards with 833.04 revenue generated
+2. Margaret Park reporting to Nancy Edwards with 775.4 revenue generated
+3. Steve Johnson reporting to Nancy Edwards with 720.16 revenue generated
+
+
 <br>
 
 ### Question 4: What is the running cumulative total of revenue, month by month, over the store's history?
 
+SQL query:
 
 ```sql
 SELECT Month, MonthRevenue, SUM(MonthRevenue) OVER (ORDER BY Month) AS CumulativeRevenue
@@ -130,6 +168,8 @@ FROM
 	GROUP BY Month)
 ORDER BY Month;
 ```
+
+Query output:
 
 | Month | MonthRevenue | CumulativeRevenue |
 |---|---|---|
@@ -194,9 +234,18 @@ ORDER BY Month;
 | 2013-11 | 49.62 | 2289.98 |
 | 2013-12 | 38.62 | 2328.6 |
 
+
+Question response:
+
+The above table shows each month's revenue and the cumulative revenue. Most months have a revenue of 37.62, and the highest revenue is 52.62 in 2010-01.
+
+
 <br>
 
 ### Question 5: Which tracks have never been purchased?
+
+
+SQL query:
 
 ```sql
 SELECT Track.TrackId, Track.Name, COUNT(InvoiceLine.Quantity) AS PurchaseCount
@@ -207,7 +256,7 @@ HAVING PurchaseCount = 0
 ORDER BY Track.Name ASC, Track.TrackId ASC;
 ```
 
-The following table is the truncated output of the query.
+The following table is the truncated output of the query:
 
 | TrackId | Name | PurchaseCount |
 |---|---|---|
@@ -233,9 +282,15 @@ The following table is the truncated output of the query.
 | 1073 | Óia Eu Aqui De Novo | 0 |
 | 1077 | Último Pau-De-Arara | 0 |
 
+Question response:
+
+The query outputs a list of more than 1500 tracks never purchased saved in `queries-and-outputs\query5-output.csv`.
+
 <br>
 
 ### Question 6: Which 5 countries generate the most revenue, and what is the average revenue per customer in each?
+
+SQL query:
 
 ```sql
 SELECT Country, CountryRevenue, CountryCustomerCount,  ROUND(CountryRevenue / CountryCustomerCount, 2)  AS CountryRevenuePerCustomer
@@ -248,6 +303,8 @@ ORDER BY CountryRevenue DESC, Country ASC
 LIMIT 5;
 ```
 
+Query output:
+
 | Country | CountryRevenue | CountryCustomerCount | CountryRevenuePerCustomer |
 |---|---|---|---|
 | USA | 523.06 | 13 | 40.24 |
@@ -256,9 +313,17 @@ LIMIT 5;
 | Brazil | 190.1 | 5 | 38.02 |
 | Germany | 156.48 | 4 | 39.12 |
 
+
+Question response:
+
+The table above shows a list of top 5 countries in terms of total revenue along with their revenue per customer; USA and Canada have by far the highest revenue, but the revenue per customer of the 5 countries are close.
+
 <br>
 
 ### Question 7: For each customer, what is their top genre by amount spent?
+
+
+SQL query:
 
 ```sql
 SELECT CustomerId, FirstName, LastName, GenreName AS TopGenre, GenreTotalSpent
@@ -275,6 +340,8 @@ FROM
 WHERE GenreRank = 1
 ORDER BY CustomerId;
 ```
+
+Query output: 
 
 | CustomerId | FirstName | LastName | TopGenre | GenreTotalSpent |
 |---|---|---|---|---|
@@ -337,3 +404,7 @@ ORDER BY CustomerId;
 | 57 | Luis | Rojas | Rock | 8.91 |
 | 58 | Manoj | Pareek | Rock | 12.87 |
 | 59 | Puja | Srivastava | Rock | 11.88 |
+
+Question response:
+
+The above table shows the top genre in terms of total spending for each customer. Rock seems to be the most frequent genre, which is unsurprising considering it was the genre with the highest revenue.
