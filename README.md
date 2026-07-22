@@ -18,13 +18,14 @@ The queries and query outputs of each question are included in the `queries-and-
 
 In this project, we address the following questions using SQL queries:
 
-1. Who are the top 5 highest-spending customers, and how much has each spent in total?
-2. What is total revenue by genre?
-3. Which employees generated the most revenue through their assigned customers, and who is each employee's manager?
-4. What is the running cumulative total of revenue, month by month, over the store's history?
-5. Which tracks have never been purchased?
-6. Which 5 countries generate the most revenue, and what is the average revenue per customer in each?
-7. For each customer, what is their top genre by amount spent?
+1. [Who are the top 5 highest-spending customers, and how much has each spent in total?](#question-1-who-are-the-top-5-highest-spending-customers-and-how-much-has-each-spent-in-total)
+2. [What is total revenue by genre?](#question-2-what-is-total-revenue-by-genre)
+3. [Which employees generated the most revenue through their assigned customers, and who is each employee's manager?](#question-3-which-employees-generated-the-most-revenue-through-their-assigned-customers-and-who-is-each-employees-manager)
+4. [What is the running cumulative total of revenue, month by month, over the store's history?](#question-4-what-is-the-running-cumulative-total-of-revenue-month-by-month-over-the-stores-history)
+5. [Which tracks have never been purchased?](#question-5-which-tracks-have-never-been-purchased)
+6. [Which 5 countries generate the most revenue, and what is the average revenue per customer in each?](#question-6-which-5-countries-generate-the-most-revenue-and-what-is-the-average-revenue-per-customer-in-each)
+7. [For each customer, what is their top genre by amount spent?](#question-7-for-each-customer-what-is-their-top-genre-by-amount-spent)
+
 
 
 ### Question 1: Who are the top 5 highest-spending customers, and how much has each spent in total?
