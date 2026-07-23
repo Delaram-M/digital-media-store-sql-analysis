@@ -6,7 +6,7 @@ In this project, multiple questions about a digital media store is addressed thr
 ## Data Source
 
 The SQLite database used for this project is from the
-<a href="https://github.com/lerocha/chinook-database">Chinook Database</a> <a href="https://github.com">GitHub</a> repostiory of <a href="https://github.com/lerocha">Luis Rocha</a>.
+<a href="https://github.com/lerocha/chinook-database">Chinook Database</a> <a href="https://github.com">GitHub</a> repository of <a href="https://github.com/lerocha">Luis Rocha</a>.
 
 
 ## Queries and Outputs
@@ -410,7 +410,7 @@ The above table shows the top genre in terms of total spending for each customer
 ## Attributions
 
 The database used for this project is from the
-<a href="https://github.com/lerocha/chinook-database">Chinook Database</a> <a href="https://github.com">GitHub</a> repostiory of <a href="https://github.com/lerocha">Luis Rocha</a>.
+<a href="https://github.com/lerocha/chinook-database">Chinook Database</a> <a href="https://github.com">GitHub</a> repository of <a href="https://github.com/lerocha">Luis Rocha</a>.
 
 The following is the <a href="https://github.com/lerocha/chinook-database?tab=License-1-ov-file#chinook-database">Chinook Database License</a>:
 
