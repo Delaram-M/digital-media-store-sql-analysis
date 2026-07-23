@@ -312,7 +312,7 @@ Query output:
 
 Question response:
 
-The table above shows a list of top 5 countries in terms of total revenue along with their revenue per customer; USA and Canada have by far the highest revenue, but the revenue per customer of the 5 countries are close.
+The table above shows a list of top 5 countries in terms of total revenue along with their revenue per customer; USA and Canada have by far the highest revenue, but the revenue per customer of the 5 countries is close.
 
 
 ### Question 7: For each customer, what is their top genre by amount spent?
