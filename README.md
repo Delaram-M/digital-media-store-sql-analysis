@@ -1,6 +1,6 @@
 # Digital Media Store SQL Analysis
 
-In this project, multiple questions about a digital media store is addressed through analyzing data in a SQLite database with SQL queries.
+In this project, multiple questions about a digital media store are addressed through analyzing data in a SQLite database with SQL queries.
 
 
 ## Data Source
