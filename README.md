@@ -280,7 +280,7 @@ The following table is the truncated output of the query:
 
 Question response:
 
-The query outputs a list of more than 1500 tracks never purchased saved in `queries-and-outputs\query5-output.csv`.
+There are more than 1500 tracks never purchased saved in `queries-and-outputs\query5-output.csv`; it can be a good idea to consider whether having them in the digital media store is worth the costs.
 
 
 
